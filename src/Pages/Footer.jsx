@@ -7,6 +7,7 @@ import {
   Pin, 
   Globe, 
 } from "lucide-react";
+import { FaPinterest } from "react-icons/fa";
 
 const Footer = () => {
   const [name, setName] = useState("");
@@ -39,7 +40,7 @@ const Footer = () => {
     { name: "Instagram", url: "https://www.instagram.com/", Icon: Instagram },
     { name: "Linkedin", url: "https://www.linkedin.com/", Icon: Linkedin },
     { name: "Skype", url: "https://www.skype.com/", Icon: Phone },
-    { name: "Pinterest", url: "https://www.pinterest.com/", Icon: Pin },
+    { name: "Pinterest", url: "https://www.pinterest.com/", Icon: FaPinterest  },
     { name: "Reddit", url: "https://www.reddit.com/", Icon: Globe },
   ];
 

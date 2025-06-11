@@ -11,6 +11,10 @@ import CartEdited from "./Components/CartEdited";
 import Checkoutedited from "./Components/Checkoutedited";
 import Onlinecoursespage from "./Components/Onlinecoursespage";
 import Coursedetailfullpage from "./Components/Coursedetailfullpage";
+import Studentdashboard from "./Components/Studentdashboard";
+import Signinpage from "./Components/Signinpage";
+import HomePageModel from "./Components/HomePageModel";
+import Countdownpage from "./Components/Countdownpage";
 
 const App = () => {
   return (
@@ -30,6 +34,10 @@ const App = () => {
       <Checkoutedited />
       <Onlinecoursespage />
       <Coursedetailfullpage/>
+      <Studentdashboard />
+      <Signinpage/>
+      <HomePageModel/>
+      <Countdownpage/>
       <Footer />
     </>
   );

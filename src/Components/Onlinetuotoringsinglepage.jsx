@@ -127,7 +127,7 @@ const Onlinetuotoringsinglepage = () => {
 
           {/* Right Half: Content */}
           <div className="w-full md:w-1/2 text-center md:text-left space-y-5">
-            <h2 className="text-3xl font-bold text-yellow-400">
+            <h2 className="text-3xl font-bold text-[#313D6A]">
               Small Group Sessions
             </h2>
             <p className="text-base md:text-lg leading-relaxed text-gray-900">

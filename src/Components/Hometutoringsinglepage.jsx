@@ -1,4 +1,5 @@
 import Hometutor from "../assets/Home-tutor.png";
+import individualgroup from "../assets/individualgroup.png";
 import Subtract1 from "../assets/Subtract 1.png";
 import benefits from "../assets/benefits.png";
 import pastpapers from "../assets/pastpapers.png";
@@ -64,6 +65,11 @@ const Hometutoringsinglepage = () => {
 
         {/* Card 2 */}
         <div className="border border-gray-200 rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 flex flex-col items-center text-center">
+          <img
+            src={individualgroup}
+            alt="Subjects"
+            className="w-30 h-20 mb-4"
+          />
           <h1 className="text-2xl font-bold mb-4">SMART LEARNING SOLUTIONS</h1>
           <p className="text-gray-700 text-base leading-relaxed">
             Students often struggle in classrooms due to limited attention. Our
