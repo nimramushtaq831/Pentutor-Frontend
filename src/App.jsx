@@ -1,20 +1,21 @@
-import React from "react";
-import Sidebar from "./assets/SideBar";
-import TopBar from "./assets/TopBar";
-import FeatureGrid from "./assets/FeatureGrid";
-import TeamsCalendar from "./assets/team-membering";
+"use client"
+import { useState } from "react"
+import TeamsHome from "./assets/teams-home"
+import TeamsCalendar from "./assets/team-membering"
+import TeamChat from "./assets/team-chat"
+import Scheduler from "./assets/schedule"
 
-function App() {
-  return (
-    <div>
-      {/* <Sidebar />
-      <div className="flex flex-col flex-1">
-        <TopBar />
-        <FeatureGrid />
-      </div> */}
-      <TeamsCalendar/>
-    </div>
-  );
+export default function Page() {
+  const [currentPage, setCurrentPage] = useState("home")
+
+  switch (currentPage) {
+    case "meetings":
+      return <TeamsCalendar onNavigate={setCurrentPage} />
+    case "teamchat":
+      return <TeamChat onNavigate={setCurrentPage} />
+    case "scheduler":
+      return <Scheduler onNavigate={setCurrentPage} />
+    default:
+      return <TeamsHome onNavigate={setCurrentPage} />
+  }
 }
-
-export default App;

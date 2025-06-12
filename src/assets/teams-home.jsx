@@ -15,12 +15,16 @@ import {
   Plus,
   ChevronDown,
   Umbrella,
+  Share,
+  Leaf,
 } from "lucide-react"
 import { useState } from "react"
 import MeetingModal from "./meeting-modal"
+import JoinMeetingModal from "./join-meeting-modal"
 
-export default function TeamsCalendar({ onNavigate }) {
-  const [showModal, setShowModal] = useState(false)
+export default function TeamsHome({ onNavigate }) {
+  const [showMeetingModal, setShowMeetingModal] = useState(false)
+  const [showJoinModal, setShowJoinModal] = useState(false)
   const [meetings, setMeetings] = useState([])
 
   const handleSaveMeeting = (meeting) => {
@@ -46,17 +50,20 @@ export default function TeamsCalendar({ onNavigate }) {
 
         <div className="flex items-center space-x-8">
           <div className="flex items-center space-x-8">
-            <div className="flex flex-col items-center text-xs cursor-pointer" onClick={() => onNavigate("home")}>
-              <Home className="w-5 h-5 mb-1" />
-              <span>Home</span>
+            <div
+              className="flex flex-col items-center text-xs cursor-pointer bg-slate-600 px-3 py-2 rounded-md"
+              onClick={() => onNavigate("home")}
+            >
+              <Home className="w-5 h-5 mb-1 text-blue-400" />
+              <span className="text-blue-400 font-medium">Home</span>
             </div>
             <div className="flex flex-col items-center text-xs cursor-pointer" onClick={() => onNavigate("teamchat")}>
               <MessageSquare className="w-5 h-5 mb-1" />
               <span>Team Chat</span>
             </div>
-            <div className="flex flex-col items-center text-xs cursor-pointer bg-slate-600 px-3 py-2 rounded-md">
-              <Video className="w-5 h-5 mb-1 text-blue-400" />
-              <span className="text-blue-400 font-medium">Meetings</span>
+            <div className="flex flex-col items-center text-xs cursor-pointer" onClick={() => onNavigate("meetings")}>
+              <Video className="w-5 h-5 mb-1" />
+              <span>Meetings</span>
             </div>
             <div className="flex flex-col items-center text-xs cursor-pointer" onClick={() => onNavigate("scheduler")}>
               <Calendar className="w-5 h-5 mb-1" />
@@ -84,48 +91,55 @@ export default function TeamsCalendar({ onNavigate }) {
       </div>
 
       <div className="flex flex-1">
-        {/* Left Calendar Section */}
-        <div className="flex-1 bg-gray-50 p-6">
-          <div className="flex items-center space-x-4 mb-6">
-            <div className="w-6 h-6 bg-black rounded-sm"></div>
-            <button className="bg-white border border-gray-300 text-gray-700 px-4 py-2 rounded-md text-sm font-medium shadow-sm">
-              Today
-            </button>
-            <ChevronLeft className="w-5 h-5 text-gray-600 cursor-pointer" />
-            <ChevronRight className="w-5 h-5 text-gray-600 cursor-pointer" />
-            <h2 className="text-2xl font-semibold text-gray-900 ml-4">June 2025</h2>
-          </div>
+        {/* Main Content Area */}
+        <div className="flex-1 bg-gray-50 flex items-center justify-center">
+          <div className="grid grid-cols-2 gap-8">
+            {/* New Meeting Button */}
+            <div className="flex flex-col items-center cursor-pointer group">
+              <div className="w-32 h-32 bg-orange-500 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-orange-600 transition-colors">
+                <Video className="w-12 h-12 text-white" />
+              </div>
+              <span className="text-lg font-medium text-gray-800">New Meeting</span>
+            </div>
 
-          <div className="flex items-center justify-center h-96">
-            <div className="text-center">
-              <div className="inline-block mb-8">
-                <div className="bg-blue-500 text-white px-8 py-3 rounded-t-lg text-lg font-medium">July</div>
-                <div className="bg-white border border-t-0 border-gray-200 px-8 py-6 rounded-b-lg shadow-sm">
-                  <div className="text-6xl font-light text-gray-800 mb-2">17</div>
-                  <div className="flex justify-center space-x-1">
-                    <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
-                    <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
-                    <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
-                  </div>
+            {/* Join Button */}
+            <div className="flex flex-col items-center cursor-pointer group" onClick={() => setShowJoinModal(true)}>
+              <div className="w-32 h-32 bg-slate-700 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-slate-800 transition-colors">
+                <Plus className="w-12 h-12 text-white" />
+              </div>
+              <span className="text-lg font-medium text-gray-800">Join</span>
+            </div>
+
+            {/* Share Screen Button */}
+            <div className="flex flex-col items-center cursor-pointer group">
+              <div className="w-32 h-32 bg-slate-700 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-slate-800 transition-colors">
+                <Share className="w-12 h-12 text-white" />
+              </div>
+              <span className="text-lg font-medium text-gray-800">Share Screen</span>
+            </div>
+
+            {/* Schedule Button */}
+            <div className="flex flex-col items-center cursor-pointer group" onClick={() => setShowMeetingModal(true)}>
+              <div className="w-32 h-32 bg-slate-700 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-slate-800 transition-colors relative">
+                <Calendar className="w-12 h-12 text-white" />
+                <div className="absolute bottom-3 right-3 bg-white text-slate-700 rounded px-2 py-1 text-sm font-bold">
+                  12
                 </div>
               </div>
-
-              <div className="max-w-md mx-auto">
-                <h3 className="text-xl font-medium text-gray-900 mb-3">No events available yet</h3>
-                <p className="text-gray-600 text-sm mb-6">Add a calendar to Pen Tutor to see more events.</p>
-                <button className="bg-slate-700 text-white px-6 py-3 rounded-md font-medium hover:bg-slate-800 transition-colors">
-                  Connect Calendar
-                </button>
-              </div>
+              <span className="text-lg font-medium text-gray-800">Schedule</span>
             </div>
           </div>
         </div>
 
         {/* Right Sidebar */}
         <div className="w-80 bg-white border-l border-gray-200 flex flex-col">
+          {/* Time Display Header */}
           <div className="bg-slate-700 text-white p-6 relative">
             <div className="text-center">
-              <div className="text-4xl font-light mb-2">3:29 PM</div>
+              <div className="flex items-center justify-center mb-3">
+                <Leaf className="w-8 h-8 text-green-400 mr-3" />
+                <div className="text-4xl font-light">3:29 PM</div>
+              </div>
               <div className="text-sm opacity-90">Tuesday, June 10</div>
             </div>
             <button className="absolute top-4 right-4">
@@ -133,6 +147,7 @@ export default function TeamsCalendar({ onNavigate }) {
             </button>
           </div>
 
+          {/* Calendar Connection Message */}
           <div className="p-6 border-b border-gray-200">
             <p className="text-gray-600 text-sm leading-relaxed">
               Respond to events, see other's availability and more by{" "}
@@ -140,6 +155,7 @@ export default function TeamsCalendar({ onNavigate }) {
             </p>
           </div>
 
+          {/* Today Section */}
           <div className="p-6 flex-1">
             <div className="flex items-center justify-between mb-6">
               <div className="flex items-center space-x-2">
@@ -158,6 +174,7 @@ export default function TeamsCalendar({ onNavigate }) {
               </div>
             </div>
 
+            {/* No Meetings Section */}
             <div className="text-center py-8">
               {meetings.length === 0 ? (
                 <>
@@ -179,7 +196,7 @@ export default function TeamsCalendar({ onNavigate }) {
                 </div>
               )}
               <button
-                onClick={() => setShowModal(true)}
+                onClick={() => setShowMeetingModal(true)}
                 className="text-blue-600 text-sm font-medium flex items-center justify-center space-x-2 hover:text-blue-700"
               >
                 <Plus className="w-4 h-4" />
@@ -188,6 +205,7 @@ export default function TeamsCalendar({ onNavigate }) {
             </div>
           </div>
 
+          {/* Bottom Link */}
           <div className="p-6 border-t border-gray-200">
             <button className="text-blue-600 text-sm font-medium flex items-center space-x-1 hover:text-blue-700">
               <span>Open Recordings</span>
@@ -197,7 +215,8 @@ export default function TeamsCalendar({ onNavigate }) {
         </div>
       </div>
 
-      <MeetingModal isOpen={showModal} onClose={() => setShowModal(false)} onSave={handleSaveMeeting} />
+      <MeetingModal isOpen={showMeetingModal} onClose={() => setShowMeetingModal(false)} onSave={handleSaveMeeting} />
+      <JoinMeetingModal isOpen={showJoinModal} onClose={() => setShowJoinModal(false)} />
     </div>
   )
 }
