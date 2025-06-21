@@ -6,23 +6,8 @@ import onlinesessionGroup from "../assets/onlinesessionGroup.png";
 const OnlineAcdSession = () => {
   return (
     <div className="relative bg-[#FEFAEB] w-full py-10">
-      {/* online acd session position images like ellipse */}
-      <div className="absolute top-90 right-0 sm:top-24 md:top-32 lg:top-40 ">
-        <img
-          className="w-[40px] md:w-[80px] h-[90] "
-          src={onlineacdSubtract}
-          alt="onlineacdSubtract"
-        />
-      </div>
-      {/* image 2 */}
-      <div className="absolute left-0 top-[76%] md:top-[60%] w-auto max-w-[60px] sm:max-w-[100px] md:max-w-[100px] lg:max-w-[250px]">
-        <img
-          src={onlinesessionGroup}
-          alt="onlinesessionGroup"
-          className="relative w-full h-auto z-0 md:max-w-[80px]"
-        />
-      </div>
-
+     
+    
       <div className="max-w-screen-xl pb-20 flex flex-col md:flex-row items-center justify-between px-4 md:px-0">
         {/* Left Side - Image */}
         <div className="w-full md:w-1/2 flex justify-center md:justify-start mb-8 md:mb-0">
@@ -34,11 +19,11 @@ const OnlineAcdSession = () => {
         </div>
 
         {/* Right Side - Text */}
-        <div className="w-full md:w-1/2 flex flex-col justify-center items-center text-[#313D6A] space-y-4 text-center">
-          <h1 className="text-4xl sm:text-4xl md:text-6xl font-bold leading-tight">
+        <div className="w-full md:w-1/2 flex flex-col justify-center items-center text-[#313D6A]  text-center">
+          <h1 className="text-4xl sm:text-4xl md:text-5xl font-bold leading-tight">
             Online Academy
           </h1>
-          <h1 className="text-4xl sm:text-4xl md:text-6xl font-bold leading-tight">
+          <h1 className="text-4xl sm:text-4xl md:text-5xl font-bold leading-tight">
             Sessions
           </h1>
         </div>

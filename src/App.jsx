@@ -1,7 +1,10 @@
 import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import Navbar from "./Pages/Navbar";
 import Navbar2 from "./Pages/Navbar2";
 import Footer from "./Pages/Footer";
+
 import Smallgroupsession from "./Components/Smallgroupsession";
 import OnlineAcdSession from "./Components/OnlineAcdSession";
 import Onlinetuotoringsinglepage from "./Components/Onlinetuotoringsinglepage";
@@ -11,35 +14,30 @@ import CartEdited from "./Components/CartEdited";
 import Checkoutedited from "./Components/Checkoutedited";
 import Onlinecoursespage from "./Components/Onlinecoursespage";
 import Coursedetailfullpage from "./Components/Coursedetailfullpage";
-import Studentdashboard from "./Components/Studentdashboard";
-import Signinpage from "./Components/Signinpage";
-import HomePageModel from "./Components/HomePageModel";
-import Countdownpage from "./Components/Countdownpage";
+import Allgroupsessionpageedited from "./Components/Allgroupsessionpageedited";
+import Aboutus from "./Components/Aboutus";
+import Contact from "./Components/Contact";
 
 const App = () => {
   return (
-    <>
+    <Router>
       <Navbar />
-      <Smallgroupsession />
-      <Navbar />
-      <OnlineAcdSession />
-      <Navbar />
-      <Onlinetuotoringsinglepage />
-      <Navbar />
-      <Hometutoringsinglepage />
-      <Navbar />
-      <Onlineindividualsession />
-      <Navbar2 />
-      <CartEdited />
-      <Checkoutedited />
-      <Onlinecoursespage />
-      <Coursedetailfullpage/>
-      <Studentdashboard />
-      <Signinpage/>
-      <HomePageModel/>
-      <Countdownpage/>
+      <Routes>
+        <Route path="/" element={<Smallgroupsession />} />
+        <Route path="/online-Acd" element={<OnlineAcdSession />} />
+        <Route path="/online-tutoring" element={<Onlinetuotoringsinglepage />} />
+        <Route path="/home-tutoring" element={<Hometutoringsinglepage />} />
+        <Route path="/individual-group" element={<Onlineindividualsession />} />
+        <Route path="/cart" element={<CartEdited />} />
+        <Route path="/checkout" element={<Checkoutedited />} />
+        <Route path="/courses" element={<Onlinecoursespage />} />
+        <Route path="/course-detail" element={<Coursedetailfullpage />} />
+        <Route path="/group-sessions" element={<Allgroupsessionpageedited />} />
+        <Route path="/about-us" element={<Aboutus/>}/>
+        <Route path="/contact" element={<Contact/>}/>
+      </Routes>
       <Footer />
-    </>
+    </Router>
   );
 };
 

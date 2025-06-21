@@ -6,7 +6,7 @@ const Onlinecoursespage = () => {
   return (
     <div className="w-full relative bg-[#F5F5F8]">
       <div className="max-w-screen-xl pb-20 flex flex-col md:flex-row items-center justify-between px-4 md:px-0">
-        <div className="w-full md:w-1/2 mt-10 flex flex-col justify-center items-center text-[#313D6A] space-y-4 text-center">
+        <div className="w-full md:w-1/2 mt-10 flex flex-col justify-center items-center text-[#313D6A]  text-center">
           <h1 className="text-4xl sm:text-4xl md:text-5xl font-bold leading-tight">
             Search Online Courses
           </h1>
@@ -15,12 +15,7 @@ const Onlinecoursespage = () => {
           </h1>
         </div>
         <div className="relative w-full md:w-1/2 flex justify-center md:justify-end mb-8 md:mb-0">
-          <img
-            src={Subtract1}
-            alt="Subtract1"
-            className="absolute w-2/3 max-w-[250px] sm:max-w-sm md:max-w-sm lg:max-w-md xl:max-w-md z-0 "
-          />
-
+          
           <img
             src={onlinecours}
             alt="home-tutor"

@@ -1,60 +1,24 @@
 import smallgroup from "../assets/SmallGroupsessions.png";
 import page from "../assets/page.png";
-import Subtract from "../assets/Subtract.png";
-import Subtract1 from "../assets/Subtract 1.png";
-import Subtract3 from "../assets/Subtract 3.png";
-import Subtract4 from "../assets/Subtract4.png";
-import Group from "../assets/Group 158.png";
+
 const Smallgroupsession = () => {
   return (
     <>
       <div className="relative bg-[#F5F5F8] w-full">
-        {/* First ellipse */}
-        <div className="absolute top-90 sm:top-24 md:top-32 lg:top-40 ">
-          <img
-            className="w-[40px] md:w-[80px] h-[90] "
-            src={Subtract}
-            alt="Ellipse"
-          />
-        </div>
-        {/* Second ellipse */}
-        {/* Image Container */}
-        <div className="absolute right-0 top-[30%] md:top-[30%] w-auto max-w-[60px] sm:max-w-[250px] md:max-w-[200px] lg:max-w-[350px]">
-          <img
-            src={Subtract4}
-            alt="Foreground"
-            className="relative w-full h-auto z-0  md:max-w-[80px]"
-          />
-        </div>
-        {/* Third ellipse */}
-        <div className="absolute left-0 top-[86%] md:top-[60%] w-auto max-w-[60px] sm:max-w-[100px] md:max-w-[100px] lg:max-w-[250px]">
-          <img
-            src={Group}
-            alt="Foreground"
-            className="relative w-full h-auto z-0 md:max-w-[80px]"
-          />
-        </div>
-        {/* Fourth Elipse */}
-
+        
         <div className="max-w-screen-xl mx-auto px-4 py-10 flex flex-col-reverse md:flex-row items-center justify-between">
           {/* Text Content */}
-          <div className="w-full md:w-1/2 text-center  md:text-center text-[#313D6A] space-y-4">
-            <h1 className="text-4xl sm:text-4xl md:text-6xl  font-bold leading-tight">
+          <div className="w-full md:w-1/2 text-center md:text-center text-[#313D6A] ">
+            <h1 className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
               Online Small
             </h1>
-            <h1 className="text-4xl sm:text-4xl md:text-6xl font-bold leading-tight">
+            <h1 className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
               Group Sessions
             </h1>
           </div>
 
           {/* Image Content */}
           <div className="w-full md:w-1/2 flex justify-center items-center mb-8 md:mb-0 relative">
-            {/* Background image behind */}
-            <img
-              src={Subtract1}
-              alt="Subtract1"
-              className="absolute w-2/3 max-w-[250px] sm:max-w-sm md:max-w-sm lg:max-w-md xl:max-w-md z-0 -right-2 "
-            />
 
             {/* Foreground image */}
             <img
@@ -64,8 +28,9 @@ const Smallgroupsession = () => {
             />
           </div>
         </div>
+
         {/* Small Group and Coaching Session */}
-        <div className="max-w-screen-xl mx-auto w-[90%] mb-16">
+        <div className="max-w-screen-xl mx-auto w-[90%] mb-6">
           <h1 className="py-2 text-2xl md:text-3xl font-bold text-black mb-4">
             SMALL GROUP COACHING SESSION
           </h1>
@@ -83,8 +48,8 @@ const Smallgroupsession = () => {
         </div>
 
         {/* Unique Stratrigies */}
-        <div className="max-w-screen-xl mx-auto w-[90%]">
-          <h1 className="text-2xl md:text-3xl font-bold text-black text-center mb-10">
+        <div className="max-w-screen-xl mx-auto w-[90%] ">
+          <h1 className="text-2xl md:text-3xl font-bold text-black text-center py-6">
             PEN TUTOR SMALL COACHING SESSIONS UNIQUE STRATEGIES
           </h1>
         </div>
@@ -92,8 +57,8 @@ const Smallgroupsession = () => {
         <div className="max-w-screen-xl mx-auto w-[90%]">
           <div className="max-w-screen-xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-x-6">
             {/* Text Section */}
-            <div className="w-full md:w-1/3">
-              <ul className="text-base text-left md:text-lg leading-relaxed text-gray-900 space-y-4 list-disc pl-5">
+            <div className="w-full md:w-1/2">
+              <ul className="text-base md:text-lg leading-relaxed text-gray-900 font-medium space-y-4 list-disc pl-5">
                 <li>
                   Pen Tutor's small group coaching sessions create a flexible
                   yet challenging environment that helps students grow both
@@ -115,16 +80,17 @@ const Smallgroupsession = () => {
             </div>
 
             {/* Image Section */}
-            <div className="w-full md:w-1/2 ">
+            <div className="w-full md:w-1/2 flex justify-center">
               <img
                 src={page}
                 alt="Page"
-                className="w-full max-w-md md:max-w-[100%]"
+                className="w-full max-w-md md:max-w-md"
               />
             </div>
           </div>
-          <div className="w-full mb-10">
-            <ul className="text-base text-left md:text-lg leading-relaxed text-gray-900 space-y-4 list-disc pl-5">
+
+          <div className="w-full mt-8">
+            <ul className="text-base md:text-lg leading-relaxed text-gray-900 font-medium space-y-4 list-disc pl-5">
               <li>
                 When all the students follow a precise schedule, it keeps them
                 committed to their work and prevents them from leaving tasks
@@ -150,19 +116,16 @@ const Smallgroupsession = () => {
             </ul>
           </div>
 
-          <div className="w-full text-base md:text-lg text-gray-900 leading-relaxed py-10">
-            <h1 className="py-2 text-center text-2xl md:text-3xl font-bold text-black mb-4">
+          <div className="w-full text-base md:text-base text-gray-900 leading-relaxed py-10 px-2">
+            <h1 className="py-2 text-center text-2xl md:text-2xl font-bold text-black mb-4">
               SMALL GROUP COACHING SESSION
             </h1>
-            <p>
+            <p className="text-center text-base md:text-lg leading-relaxed text-gray-900 font-medium space-y-4 list-disc pl-5">
               We are providing exactly what your child needs. Our certified
               staff is equipped with all the essential teaching techniques to
               make your child successive in his/her academic career. We offer
               you the most suitable economic fee packages to let your child be a
-              part of Pen Tutor's great academic environment.
-            </p>
-            <p className="text-center">
-              We provide all what your child needs to be successful in his/her
+              part of Pen Tutor's great academic environment.We provide all what your child needs to be successful in his/her
               academic future.
             </p>
           </div>

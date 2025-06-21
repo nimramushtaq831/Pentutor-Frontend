@@ -9,7 +9,7 @@ const CartEdited = () => {
         </h1>
       </div>
 
-      <div className="flex flex-col w-[90%] m-auto  lg:flex-row gap-8 py-20 min-h-screen">
+      <div className="flex flex-col w-[90%] m-auto  lg:flex-row gap-8 py-20">
         {/* LEFT: Product Cards */}
         <div className="flex-1 flex flex-col gap-4">
           {[1, 2, 3].map((item) => (

@@ -77,22 +77,21 @@ const ZoommoduleNav = () => {
               </svg>
             </button>
           </div>
-
           <div
             className={`items-center justify-between w-full md:flex md:w-auto md:order-1 transition-all duration-300 ease-in-out ${
               isOpen ? "flex" : "hidden"
             }`}
             id="navbar-cta"
           >
-            <ul className="flex flex-col  font-normal text-[11px] leading-[16px] p-4 md:p-0 mt-4 md:space-x-5 md:flex-row md:mt-0 md:border-0 rtl:space-x-reverse">
+            <ul className="flex flex-col font-normal text-[11px] leading-[16px] p-4 md:p-0 mt-4 md:space-x-5 md:flex-row md:mt-0 md:border-0 rtl:space-x-reverse">
               {/* Menu items */}
               <li>
                 <a
                   href="#"
-                  className="flex flex-col items-center justify-center py-2 px-3 text-white/80 text-[16px] font-light transition duration-300 hover:bg-white hover:text-black rounded"
+                  className="flex flex-row items-center gap-2 py-2 px-3 text-white/80 text-[16px] font-light transition duration-300 hover:bg-white hover:text-black rounded"
                   aria-current="page"
                 >
-                  <HomeIcon className="h-6 w-6 mb-1" />
+                  <HomeIcon className="h-6 w-6" />
                   <span>Home</span>
                 </a>
               </li>
@@ -100,10 +99,10 @@ const ZoommoduleNav = () => {
               <li>
                 <a
                   href="#"
-                  className="flex flex-col items-center justify-center py-2 px-3 text-white/80 text-[16px] font-light transition duration-300 hover:bg-white hover:text-black rounded"
+                  className="flex flex-row items-center gap-2 py-2 px-3 text-white/80 text-[16px] font-light transition duration-300 hover:bg-white hover:text-black rounded"
                   aria-current="page"
                 >
-                  <ChatBubbleLeftIcon className="h-6 w-6 mb-1" />
+                  <ChatBubbleLeftIcon className="h-6 w-6" />
                   <span>Team Chat</span>
                 </a>
               </li>
@@ -111,20 +110,21 @@ const ZoommoduleNav = () => {
               <li>
                 <a
                   href="#"
-                  className="flex flex-col items-center justify-center py-2 px-3 text-white/80 text-[16px] font-light transition duration-300 hover:bg-white hover:text-black rounded"
+                  className="flex flex-row items-center gap-2 py-2 px-3 text-white/80 text-[16px] font-light transition duration-300 hover:bg-white hover:text-black rounded"
                   aria-current="page"
                 >
-                  <PhoneIcon className="h-6 w-6 mb-1" />
+                  <PhoneIcon className="h-6 w-6" />
                   <span>Phone</span>
                 </a>
               </li>
+
               <li>
                 <a
                   href="#"
-                  className="flex flex-col items-center justify-center py-2 px-3 text-white/80 text-[16px] font-light transition duration-300 hover:bg-white hover:text-black rounded"
+                  className="flex flex-row items-center gap-2 py-2 px-3 text-white/80 text-[16px] font-light transition duration-300 hover:bg-white hover:text-black rounded"
                   aria-current="page"
                 >
-                  <FaRegFileAlt className="h-6 w-6 mb-1" />
+                  <FaRegFileAlt className="h-6 w-6" />
                   <span>Docs</span>
                 </a>
               </li>
@@ -132,10 +132,10 @@ const ZoommoduleNav = () => {
               <li>
                 <a
                   href="#"
-                  className="flex flex-col items-center justify-center py-2 px-3 text-white/80 text-[16px] font-light transition duration-300 hover:bg-white hover:text-black rounded"
+                  className="flex flex-row items-center gap-2 py-2 px-3 text-white/80 text-[16px] font-light transition duration-300 hover:bg-white hover:text-black rounded"
                   aria-current="page"
                 >
-                  <MdOutlineDraw className="h-6 w-6 mb-1" />
+                  <MdOutlineDraw className="h-6 w-6" />
                   <span>Whiteboards</span>
                 </a>
               </li>
@@ -143,10 +143,10 @@ const ZoommoduleNav = () => {
               <li>
                 <a
                   href="#"
-                  className="flex flex-col items-center justify-center py-2 px-3 text-white/80 text-[16px] font-[400] transition duration-300 hover:bg-white hover:text-black rounded"
+                  className="flex flex-row items-center gap-2 py-2 px-3 text-white/80 text-[16px] font-[400] transition duration-300 hover:bg-white hover:text-black rounded"
                   aria-current="page"
                 >
-                  <FaYoutube className="h-6 w-6 mb-1" />
+                  <FaYoutube className="h-6 w-6" />
                   <span>Clips</span>
                 </a>
               </li>
@@ -154,10 +154,10 @@ const ZoommoduleNav = () => {
               <li>
                 <a
                   href="#"
-                  className="flex flex-col items-center justify-center py-2 px-3 text-white/80 text-[16px] font-[400]   rounded"
+                  className="flex flex-row items-center gap-2 py-2 px-3 text-white/80 text-[16px] font-[400] rounded"
                   aria-current="page"
                 >
-                  <HiOutlineDotsHorizontal className="h-6 w-6 mb-1" />
+                  <HiOutlineDotsHorizontal className="h-6 w-6" />
                   <span>More</span>
                 </a>
               </li>

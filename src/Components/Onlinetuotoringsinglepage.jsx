@@ -3,29 +3,10 @@ import line58 from "../assets/Line 58.png";
 import individualgroup from "../assets/individualgroup.jpg";
 import individualgroup2 from "../assets/individualgroup2.jpg";
 import individualgroup3 from "../assets/individualgroup3.jpg";
-import onlinesessionGroup from "../assets/onlinesessionGroup.png";
-import Subtract4 from "../assets/Subtract4.png";
 
 const Onlinetuotoringsinglepage = () => {
   return (
     <div className="relative w-full">
-      {/* position images like ellipse */}
-      {/* image 1 */}
-      <div className="absolute left-0 top-[70%] md:top-[60%] w-auto max-w-[60px] sm:max-w-[100px] md:max-w-[100px] lg:max-w-[250px]">
-        <img
-          src={onlinesessionGroup}
-          alt="onlinesessionGroup"
-          className="relative w-full h-auto z-0 md:max-w-[80px]"
-        />
-      </div>
-      {/* image 2 */}
-      <div className="absolute right-0 top-[8%] md:top-[6%] w-auto max-w-[60px] sm:max-w-[250px] md:max-w-[200px] lg:max-w-[350px]">
-        <img
-          src={Subtract4}
-          alt="Foreground"
-          className="relative w-full h-auto z-0  md:max-w-[80px]"
-        />
-      </div>
       <div className="w-full bg-[#EAECF0] mb-20">
         <div className="max-w-screen-xl pb-20 flex flex-col md:flex-row items-center justify-between md:px-0">
           {/* Left Side - Image */}
@@ -38,11 +19,11 @@ const Onlinetuotoringsinglepage = () => {
           </div>
 
           {/* Right Side - Text */}
-          <div className="w-full md:w-1/2 flex flex-col justify-center items-center text-[#313D6A] space-y-4 text-center">
-            <h1 className="text-4xl sm:text-4xl md:text-6xl font-bold leading-tight">
+          <div className="w-full md:w-1/2 flex flex-col justify-center items-center text-[#313D6A]  text-center">
+            <h1 className="text-4xl sm:text-4xl md:text-5xl font-bold leading-tight">
               Online Tutoring
             </h1>
-            <h1 className="text-4xl sm:text-4xl md:text-6xl font-bold leading-tight">
+            <h1 className="text-4xl sm:text-4xl md:text-5xl font-bold leading-tight">
               Service
             </h1>
           </div>
@@ -82,8 +63,8 @@ const Onlinetuotoringsinglepage = () => {
         </p>
       </div>
 
-      <div className="flex justify-center mb-20 w-[90%] m-auto">
-        <img src={line58} alt="Decorative line" />
+      <div className="flex justify-center mb-20 w-[90%] mx-auto">
+        <div className="border-t-4 border-dashed border-[#313D6A] w-[60%] "></div>
       </div>
 
       {/* individual group sessions */}
@@ -115,7 +96,7 @@ const Onlinetuotoringsinglepage = () => {
 
       {/* Small Group Sessions  */}
       <div className="bg-[#FEF8E6] mb-20">
-        <div className="w-[90%] m-auto max-w-screen-xl min-h-screen flex flex-col md:flex-row items-center justify-center gap-10 ">
+        <div className="w-[90%] m-auto max-w-screen-xl py-16 flex flex-col md:flex-row items-center justify-center gap-10 ">
           {/* Left Half: Image */}
           <div className="w-full md:w-1/2 flex justify-center">
             <img

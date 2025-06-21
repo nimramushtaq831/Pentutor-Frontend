@@ -10,7 +10,7 @@ const Checkoutedited = () => {
   const [nameError, setNameError] = useState("");
   const [cardError, setCardError] = useState("");
   const [csvError, setCsvError] = useState("");
-  const [expiryError, setExpiryError] = useState(""); 
+  const [expiryError, setExpiryError] = useState("");
 
   const handleChange = (e) => {
     let value = e.target.value.replace(/\D/g, "");
@@ -75,9 +75,9 @@ const Checkoutedited = () => {
       </div>
 
       <div className="max-w-6xl w-[90%] mx-auto py-6">
-        <div className="flex flex-col lg:flex-row flex-wrap gap-6">
+        <div className="flex flex-col lg:flex-row lg:gap-8 gap-4">
           {/* Left Section */}
-          <div className="flex-1 mb-10">
+          <div className="w-full lg:w-[65%] mb-10">
             <div className="flex flex-col gap-4">
               <div className="bg-white p-6 rounded-lg shadow-md">
                 {/* Billing Address */}
@@ -156,7 +156,9 @@ const Checkoutedited = () => {
                       className={`w-full border ${
                         expiryError ? "border-red-500" : "border-gray-300"
                       } rounded-md p-2 py-3 text-sm focus:outline-none focus:ring-1 ${
-                        expiryError ? "focus:ring-red-500" : "focus:ring-gray-400"
+                        expiryError
+                          ? "focus:ring-red-500"
+                          : "focus:ring-gray-400"
                       }`}
                       required
                     />
@@ -204,7 +206,7 @@ const Checkoutedited = () => {
           </div>
 
           {/* Right Section */}
-          <div className="w-full lg:w-1/3 min-w-[300px] p-4">
+          <div className="w-full lg:w-[35%] min-w-[300px]">
             <div className="bg-white p-6 rounded-lg shadow-md">
               <h1 className="text-2xl font-bold text-center leading-tight mb-10">
                 Summary
@@ -226,7 +228,7 @@ const Checkoutedited = () => {
           {[1].map((item) => (
             <div
               key={item}
-              className="bg-white w-full md:w-[50%] border border-gray-300 rounded-md shadow-sm p-3 flex flex-col md:flex-row items-start gap-4"
+              className="bg-white w-full md:max-w-[600px] border border-gray-300 rounded-md shadow-sm p-3 flex flex-col md:flex-row items-start gap-4"
             >
               <img
                 src={cartimage2}

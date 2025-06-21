@@ -30,18 +30,18 @@ const Coursedetailfullpage = () => {
           className="absolute top-0 left-0 w-full h-full object-cover opacity-20"
         />
 
-        {/* Content Wrapper to maintain stacking */}
+        {/* Content Wrapper */}
         <div className="relative z-10 flex flex-col md:flex-row w-full h-full">
           {/* Left Section – Text */}
-          <div className="w-full md:w-1/2 flex flex-col justify-center px-6 md:px-20 py-8 text-white">
-            <h1 className="text-2xl md:text-3xl font-bold mb-2">
+          <div className="w-full md:w-1/2 flex flex-col justify-center px-6 md:px-12 lg:px-20 py-8 text-white">
+            <h1 className="text-xl sm:text-2xl lg:text-2xl font-bold mb-2">
               Learn SEO: Beginner To Advance
             </h1>
-            <h1 className="text-2xl md:text-3xl font-bold mb-4">
+            <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-4">
               Rank Your Website On 1st Page
             </h1>
 
-            <h1 className="text-lg md:text-xl font-bold mb-2">
+            <h1 className="text-base sm:text-lg lg:text-xl font-bold mb-2">
               Use Advanced tools to rank your website on 1st page
             </h1>
 
@@ -68,11 +68,11 @@ const Coursedetailfullpage = () => {
           </div>
 
           {/* Right Section – Image */}
-          <div className="w-full md:w-1/2 flex items-center justify-center p-4">
+          <div className="w-full md:w-1/2 flex items-center justify-center px-6 py-6">
             <img
               src={seo}
               alt="Right Section"
-              className="w-full max-w-sm md:max-w-[80%] h-auto object-contain"
+              className="w-full max-w-sm md:max-w-[90%] h-auto object-contain"
             />
           </div>
         </div>
