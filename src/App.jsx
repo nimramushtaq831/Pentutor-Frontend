@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -42,3 +43,10 @@ const App = () => {
 };
 
 export default App;
+=======
+import TeamsInterface from "./assets/teams-interface"
+
+export default function Page() {
+  return <TeamsInterface />
+}
+>>>>>>> 308d1201679fdf0f6ee2ab08e197ac62754dda92

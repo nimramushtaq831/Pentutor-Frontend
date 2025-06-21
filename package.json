@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "vite-project",
+=======
+  "name": "usestatehook",
+>>>>>>> 308d1201679fdf0f6ee2ab08e197ac62754dda92
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,6 +14,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@heroicons/react": "^2.2.0",
     "@tailwindcss/vite": "^4.1.7",
     "bootstrap": "^5.3.6",
@@ -22,6 +27,13 @@
     "react-icons": "^5.5.0",
     "react-router-dom": "^7.6.2",
     "tailwindcss": "^4.1.7"
+=======
+    "@tailwindcss/vite": "^4.1.8",
+    "lucide-react": "^0.513.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "tailwindcss": "^4.1.8"
+>>>>>>> 308d1201679fdf0f6ee2ab08e197ac62754dda92
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",

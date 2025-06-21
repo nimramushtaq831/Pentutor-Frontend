@@ -1,4 +1,5 @@
 @import "tailwindcss";
+<<<<<<< HEAD
 
 
 @layer base {
@@ -10,3 +11,5 @@
     font-family: 'Poppins', sans-serif;
   }
 }
+=======
+>>>>>>> 308d1201679fdf0f6ee2ab08e197ac62754dda92
